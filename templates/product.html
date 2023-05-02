@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Products</title>
+     
+</head>
+<body>
+
+    <div class="container">
+
+        <div>
+            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Mi imagen">
+
+        </diV>
+
+    <div class="table">
+
+    <table>
+        <th>Id</th>
+        <th>Code</th>
+        <th>Description</th>
+        <th>Price</th>
+        
+        <tbody>
+        <form method="POST" action ="/products/update">
+        <tr>
+            <th><input type="text" name="id" value={{product [0]}}></th>
+            <th><input type="text" value = {{product[1]}} name ="code"  ></th>
+            <th><input type="text" value = {{product[2]}} name = "description" max></th>
+            <th><input type="text" value = {{product[3]}} name = "price"></th>
+            <th><input class="button_update" type="submit" value ="Update"></th>   
+        <tr>
+        </form>
+        </tbody>
+         
+    </table> 
+
+     </div>
+
+    </div>
+    
+</body>
+</html>

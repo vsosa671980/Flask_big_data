@@ -1,0 +1,100 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2; /* gris claro */
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff; /* blanco */
+}
+
+  .table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .button_delete{
+    text-align: center;
+    background-color: red;
+    border-radius:  9px 9px;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+  }
+
+  .button_update{
+    text-align: center;
+    background-color: rgb(51, 102, 153);
+    border-radius: 9px 9px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+    padding:10px;
+    color:white;
+  }
+
+  button{
+    text-align: center;
+    background-color: rgb(102, 153, 102);
+    border-radius: 9px 9px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+    padding:15px;
+    color:white;
+    border:none;
+  }
+
+  .input_file{
+    border-radius: 9px 9px;
+    height: 100px;
+    width: 220px;
+  }
+
+  .form_file{
+    background-color:rgb(211, 211, 211);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+    gap: 20px;
+  }
+
+  .form_file_container{
+    background-color:rgb(230, 230, 230);
+    padding :50px;
+    border-radius: 9px ;
+    gap: 20px;
+  
+  }
+
+  .container_file_update{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }

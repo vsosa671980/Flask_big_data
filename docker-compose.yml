@@ -1,0 +1,31 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+###Usamos dos imagenes
+  db:
+    container_name: postgres-ejercicio4
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: actividad
+    ports:
+      - 5432:5432
+    volumes:
+      - ./dbpost:/var/lib/postgresql/data
+    
+  adminer:
+    container_name: adminer-ejercicio4
+    image: adminer
+    restart: always
+    # indicamos que depende de que se inicie de el contenedor que le indicamos
+    depends_on:
+      - db
+    # Mapea el puerto del host al puerto interno
+    ports:
+      - 8080:8080
+
+  
+  

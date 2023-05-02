@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Products</title>
+     
+</head>
+<body>
+
+    <div class="container">
+
+        <div>
+            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Mi imagen">
+
+        </diV>
+
+       
+        <div>
+            <h2>Products</h2>
+        </div>
+        <div>
+            <form method="POST" action="/products/code">
+            <label>Product Code</label>
+            <input type="search" name="code" placeholder="Product Code">
+            <input type="submit" value="Search">
+            </form>
+        </div>
+      <div class="table">
+
+      <table>
+        <th>Code</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <tbody>
+         {% for product in products %}       
+         <tr> 
+            <td>{{product[1]}}</td>
+            <td>{{product[2]}}</td>
+            <td>{{product[3]}}</td>
+            <td ><a class="button_delete" href  = {{url_for('delete_product',product_id =product[0])}}>Delete</a></td>
+            <td ><a class="button_update" href  = {{url_for('find_products',product_id =product[0])}}>Update</a></td>
+        <tr>
+         {% endfor %}
+        </tbody>
+         
+        </table> 
+
+      </div>
+
+      <form method="POST" action="/insertfile" enctype="multipart/form-data" class="form_file">
+       <div class="form_file_container">
+        <div class="container_file_update">
+            <label>File Update</label>
+            <input class="input_file" type="file" name ="file">
+        </div>
+        <div>
+            <button type="submit">Import</button>
+        </div>
+
+        {% if is_saving %}
+           <p>Saving  in the database...</p>
+        {% endif %}
+
+        </div>
+    </form>
+
+    </div>
+    
+</body>
+</html>
