@@ -4,10 +4,19 @@ import openpyxl
 from database.query_db import Querie
 from database.connection import Connection
 from urllib.parse import unquote
+from database.db_tables import DbTables
+
 
 app = Flask(__name__, static_url_path='/static')
 
+
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+
+##Instance of DbTables
+tables = DbTables()
+
+##Creating the tables of products
+tables.create_products_tables()
 
 @app.route("/",methods=["GET"])
 def home():

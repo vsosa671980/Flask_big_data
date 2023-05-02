@@ -1,3 +1,7 @@
+DESCARGA DE REPOSITORIO GITHUB
+
+https://github.com/vsosa671980/Flask_big_data
+
 BASE DE DATOS
 
 Usuario de la base de datos = postgres
@@ -15,4 +19,6 @@ USO DE LA APP
 Carga de archivo exel con las columnas de code,description y price
 Busqueda de producto en campo de busqueda por code
 Eliminacion de producto
-Actualización de producto
+Actualización de 
+
+C
